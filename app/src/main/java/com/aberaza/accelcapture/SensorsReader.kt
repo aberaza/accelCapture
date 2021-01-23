@@ -41,9 +41,9 @@ class SensorsReader : Service(), SensorEventListener {
     private var sensorMaxRange: Float = 0.0f
     private var sensorResolution: Float = 0.0f
 
-    private val MOTION_TRESHOLD_START = 0.3f
-    private val MOTION_TRESHOLD_STOP  = 0.2f
-    private val MOTION_SUDDEN_TRESHOLD: Float = 3.0f
+    private val MOTION_TRESHOLD_START = 0.8f
+    private val MOTION_TRESHOLD_STOP  = 0.6f
+    private val MOTION_SUDDEN_TRESHOLD: Float = 2 * SensorManager.GRAVITY_EARTH
     private var motionAccelCurrent = SensorManager.GRAVITY_EARTH
     private var motionCaptureStartTime: Long = 0
 
